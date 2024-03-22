@@ -1,1 +1,1 @@
-# Oprec_Admin_NCC_2024_Pertemuan_2
+# Materi Pertemuan 2 - Oprec Admin Net Centric Computing

@@ -51,20 +51,23 @@ Pilih installer sesuai OS anda. Instalasi Node.js sudah include `npm`, yaitu pac
 
 ### Ngoding Backend-nya
 1. Buat folder baru sebagai folder project
-2. Masukkan command `npm init -y` untuk men-generate file package.json. Kalian bisa edit langsung field di package.json sesuai kebutuhan project kalian.  
-![image](https://user-images.githubusercontent.com/78243059/227727264-3308587e-90b5-41f9-93a3-526334cdcaf4.png)
+2. Masukkan command `npm init -y` untuk men-generate file package.json. Kalian bisa edit langsung field di package.json sesuai kebutuhan project kalian.  <br>
+![image](https://github.com/ncclaboratory18/Oprec_Admin_NCC_2024_Pertemuan_2/assets/111508713/d9d2049b-8268-41a5-9891-e4b15bccc114)
 
-3. Install library Express dengan command `npm i express`
-4. Buat file index.js pada root project dan tuliskan kode di bawah ini  
-![image](https://user-images.githubusercontent.com/78243059/227727512-ef8ae3ed-fe90-408b-af9e-317e8468579c.png)
+
+4. Install library Express dengan command `npm i express`
+5. Buat file index.js pada root project dan tuliskan kode di bawah ini  <br>
+![Screenshot 2024-03-21 112353](https://github.com/ncclaboratory18/Oprec_Admin_NCC_2024_Pertemuan_2/assets/111508713/376aebb9-5cee-4dc4-87e7-97d09beddc62)
 
 - Pada line 1, kita meng-import library Express dan disimpan pada variabel express
 - Pada line 2, kita menjalankan fungsi express dan mendapatkan kembalian sebuah interface dari core.express lalu disimpan ke variabel app
 - Pada line 4, kita mendefinisikan port di mana sistem nanti akan berjalan
-- Pada line 6, kita mendefinisikan sebuah protokol GET [lihat penjelasan protokol RESTFUL API](#penjelasan-restful-api) yang akan mengembalikan string `Hello World`
+- Pada line 6, kita mendefinisikan sebuah protokol GET yang akan mengembalikan string `Hello NCC!`
 - Pada line 10, kita memerintahkan server untuk mendengar pada port yang kita definisikan sebelumnya. Jika console log pada callback berjalan, berarti server berhasil berjalan.
-5. Akses http://localhost:3000 pada browser dan kalian akan mendapati hasil sebagai berikut  
-![image](https://user-images.githubusercontent.com/78243059/227727818-8649e1b5-67b3-4a35-a70d-14751eb3da87.png)
+5. Akses http://localhost:3000 pada browser dan kalian akan mendapati hasil sebagai berikut<br>
+  
+![image](https://github.com/ncclaboratory18/Oprec_Admin_NCC_2024_Pertemuan_2/assets/111508713/637d2938-84d7-4fea-9846-05dc486917b1)
+
 
 **Akses url pada browser semacam ini menggunakan protokol GET secara default**
 
@@ -73,23 +76,26 @@ Pilih installer sesuai OS anda. Instalasi Node.js sudah include `npm`, yaitu pac
 ### Memodifikasi Backend
 1. Install library `nodemon` dengan command `npm i -D nodemon`. Library ini akan me-reload program secara otomatis setiap kita melakukan save pada file sehingga kita tidak perlu repot menyalakan/mematikan server setiap kali ada perubahan.
 2. Setelah menginstall, tambahkan script `start` pada package.json supaya kita bisa jalankan server melalui npm command
-![image](https://user-images.githubusercontent.com/78243059/227728560-c236d38a-d8c6-4bfd-bd9f-7bc3cee51888.png)
+![image](https://github.com/ncclaboratory18/Oprec_Admin_NCC_2024_Pertemuan_2/assets/111508713/f6993194-9281-43d8-a09e-3a47980afd8a)
 
-3. Jalankan server dengan command `npm run start` pada terminal
 
-4. Dari kode program sebelumnya, tambahkan variabel `db` bernilai array kosong yang akan diumpamakan sebagai sumber data (seperti database-nya).
-5. Modifikasi juga protokol GET supaya mengembalikan variabel data dalam bentuk json. Kode program akan jadi seperti berikut.
-![image](https://user-images.githubusercontent.com/78243059/227729007-7eb601b2-0842-439a-b202-c4b8cf5d908b.png)
+4. Jalankan server dengan command `npm run start` pada terminal
+
+5. Dari kode program sebelumnya, tambahkan variabel `db` bernilai array kosong yang akan diumpamakan sebagai sumber data (seperti database-nya).
+6. Modifikasi juga protokol GET supaya mengembalikan variabel data dalam bentuk json. Kode program akan jadi seperti berikut.
+![image](https://github.com/ncclaboratory18/Oprec_Admin_NCC_2024_Pertemuan_2/assets/111508713/067fd07e-ad5a-4405-b224-e5e40ae14a38)
+
 
 *Jangan lupa save file untuk me-restart server*
 
 6. Akses kembali http://localhost:3000 dan kalian akan mendapati server mengembalikan sebuah array kosong  
-![image](https://user-images.githubusercontent.com/78243059/227728720-655de2f5-27d2-4f10-8a7b-08b6f64ffc45.png)
+![image](https://github.com/ncclaboratory18/Oprec_Admin_NCC_2024_Pertemuan_2/assets/111508713/4dabe7a2-ea48-4762-ae50-3d86f5cdc637)
 
-7. Coba isi variabel db dengan sebuah object berisi field name, origin, dan role pada variabel data. Lalu restart server dan akses kembali localhost tadi. Kalian akan mendapati hasil sebagai berikut.  
-![image](https://user-images.githubusercontent.com/78243059/227729202-488be16f-6da7-4e2d-9351-dfc1f182a4e8.png)
 
-![image](https://user-images.githubusercontent.com/78243059/227729216-707dda36-9769-4f40-8d4c-875dc744549c.png)
+7. Coba isi variabel db dengan sebuah object berisi field nama, asal, dan angkatan pada variabel data. Lalu restart server dan akses kembali localhost tadi. Kalian akan mendapati hasil sebagai berikut.  
+![Screenshot 2024-03-23 221130](https://github.com/ncclaboratory18/Oprec_Admin_NCC_2024_Pertemuan_2/assets/111508713/ea6825a8-88b3-4ff7-98fa-b76116415849)
+
+![Screenshot 2024-03-23 221142](https://github.com/ncclaboratory18/Oprec_Admin_NCC_2024_Pertemuan_2/assets/111508713/3c59d2b5-552e-48a3-aa11-78c54951a3bb)
 
 *Selamat! Kalian sudah berhasil membuat satu endpoint API untuk mengembalikan semua data*
 
@@ -99,7 +105,8 @@ Pilih installer sesuai OS anda. Instalasi Node.js sudah include `npm`, yaitu pac
 *Kita perlu mem-push project ke repository untuk nanti bisa di-pull dari server*
 
 1. Sebelum itu, modifikasi script pada package.json menjadi sebagai berikut  
-![image](https://user-images.githubusercontent.com/78243059/227746533-47c0f22c-7238-4212-8e07-a1adf38e1b1f.png)
+![image](https://github.com/ncclaboratory18/Oprec_Admin_NCC_2024_Pertemuan_2/assets/111508713/c8c9f809-77e5-4a80-ac4c-5bea129c7ac7)
+
 
 2. Buat sebuah repository di github (dibuat public saja saat ini untuk memudahkan)
 3. Inisialisasi git pada project dengan menjalankan `git init` di terminal

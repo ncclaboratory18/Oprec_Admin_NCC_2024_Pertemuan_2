@@ -100,6 +100,20 @@ Pilih installer sesuai OS anda. Instalasi Node.js sudah include `npm`, yaitu pac
 *Selamat! Kalian sudah berhasil membuat satu endpoint API untuk mengembalikan semua data*
 
 ### Hubungkan ke MySQL
+untuk membuat project API terhubung ke sebuah database, buat sebuah file yang akan menyatakan proses koneksi ke database, misalnya `connection.js`. Disini kita akan mencoba menghubungkan project ke database MySql. Cara sederhana untuk membuat sebuah koneksi ke database adalah sebagai berikut. Jangan lupa menginstall modul mysql dengan cara perintah `npm install mysql` di terminal
+![image](https://github.com/ncclaboratory18/Oprec_Admin_NCC_2024_Pertemuan_2/assets/111508713/fbaf3de2-ad76-4969-ae5e-a37eed1bd334)
+Namun, cara tersebut memiliki banyak kekurangan dan tidak direkomendasikan untuk digunakan dalam project yang lebih besar. Cara yang lebih direkomendasikan adalah dengan membuat sebuah pool connection. Sehingga kode dalam `connection.js` dapat diubah menjadi seperti di bawah ini
+![image](https://github.com/ncclaboratory18/Oprec_Admin_NCC_2024_Pertemuan_2/assets/111508713/d047ebfc-d921-42b7-a082-0618c6a755ae)
+
+Kemudian, modifikasi index.js untuk menambahkan modul connection
+![image](https://github.com/ncclaboratory18/Oprec_Admin_NCC_2024_Pertemuan_2/assets/111508713/f9c3af59-b4d5-4baa-905c-35c31a3d13fb)
+
+Kita coba tambahkan sebuah API yang memanfaatkan koneksi database ke dalam project
+![image](https://github.com/ncclaboratory18/Oprec_Admin_NCC_2024_Pertemuan_2/assets/111508713/8efc8fb0-8db7-40a7-8ca0-bd320b6b5de4)
+
+dan hasilnya adalah sebagai berikut
+![image](https://github.com/ncclaboratory18/Oprec_Admin_NCC_2024_Pertemuan_2/assets/111508713/ab644ffa-1f84-4f3b-9072-294398d9d850)
+
 
 ### Push Project ke Repository
 *Kita perlu mem-push project ke repository untuk nanti bisa di-pull dari server*
@@ -191,8 +205,7 @@ server {
 }
 ```
 7. Aktifkan konfigurasi dengan command `sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled`, lalu restart nginx `sudo systemctl restart nginx.`
-8. Running project kalian dan akses kembali public ip  
-![image](https://user-images.githubusercontent.com/78243059/227747886-6affd1b0-5f7d-4c57-88cd-ad3d802fb6da.png)
+8. Running project kalian dan akses kembali public ip
 
 *Selamat! API server kalian sudah berhasil diakses oleh publik"
 
@@ -226,3 +239,6 @@ Cek apakah service server berjalan dengan command `sudo systemctl status server`
 *Selamat! Kalian sudah berhasil mengatur systemd untuk menjalankan server kalian!*
 
 ## 5. Postman
+Postman adalah sebuah platform yang dapat digunakan untuk melakukan testing API. Kalian dapat mengakses postman di link [postman.com](https://postman.com/) Karena dalam project ini kita menggunakan REST API, maka pilih REST API pada postman. Kalian dapat melakuakan protokol GET, POST, DELETE, dan UPDATE data melalui postman.
+![image](https://github.com/ncclaboratory18/Oprec_Admin_NCC_2024_Pertemuan_2/assets/111508713/71c6dcf9-670b-45f5-ab58-c97255a063a3)
+

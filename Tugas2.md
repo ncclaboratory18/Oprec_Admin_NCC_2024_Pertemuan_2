@@ -1,11 +1,10 @@
 # Tugas 2
 Buatlah sebuah server yang menyajikan api untuk CRUD data apapun (bebas). Beri field id (string) pada tiap object sebagai identifier. 
-1. Root url "/" (metode GET) khusus untuk mengembalikan object seperti di bawah ini. Isi sesuai data kalian masing-masing
+1. Root url "/" (metode GET) khusus untuk mengembalikan object dengan tampilan seperti di bawah ini. Isi sesuai data kalian masing-masing
 ```
 {
-  "name": "",
-  "origin": "",
-  "role": ""
+  "nama": "",
+  "asal": "",
 }
 ```
 2. Get semua data
@@ -15,8 +14,9 @@ Buatlah sebuah server yang menyajikan api untuk CRUD data apapun (bebas). Beri f
 6. Delete data by id 
 
 ### Ketentuan:
-1. Data object harus memiliki minimal 5 field dan valuenya setidaknya terdiri dari tipe data string, boolean, dan number.
-2. Tambahkan validasi
+1. Server terhubung ke database
+2. Data object harus memiliki minimal 5 field dan valuenya setidaknya terdiri dari tipe data string, boolean, dan number.
+3. Tambahkan validasi
 - Pada Create dan Update, semua field harus diisi (required), jika tidak memenuhi validasi, return error
 - Pada endpoint yang membutuhkan id, jika data dengan id terkait tidak ditemukan, return error
 4. Gunakan protokol REST API untuk CRUD-nya
@@ -57,6 +57,4 @@ Error
 ```
 
 ### Nilai Bonus
-1. Menerapkan layering atau arsitektur pada program backend-nya
-2. Program connect ke database asli (bebas mau local/public atau sql/nosql)
-3. Menerapkan CI/CD
+Menerapkan CI/CD

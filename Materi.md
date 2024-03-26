@@ -204,7 +204,7 @@ server {
     }
 }
 ```
-7. Aktifkan konfigurasi dengan command `sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled`, lalu restart nginx `sudo systemctl restart nginx.`
+7. Aktifkan konfigurasi dengan command `sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/`, lalu restart nginx `sudo systemctl restart nginx.`
 8. Running project kalian dan akses kembali public ip
 
 *Selamat! API server kalian sudah berhasil diakses oleh publik"
@@ -220,8 +220,8 @@ After=network.target
 
 [Service]
 Type=simple
-User=marcelm
-ExecStart=/usr/bin/node /home/marcelm/src/backend-express
+User=(your username)
+ExecStart=/usr/bin/node /home/username/src/project (path to project)
 Restart=on-failure
 
 [Install]
